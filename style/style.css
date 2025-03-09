@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px; /* Ajusta según la altura de tu navbar */
@@ -35,6 +35,51 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   flex-wrap: nowrap;
   max-height: 80px;
+
+  animation: enhance-header linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 200px;
+}
+
+@keyframes enhance-header {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    font-size: 18px;
+  }
+}
+
+@keyframes enhance-header-text {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    backdrop-filter: blur(5px);
+    font-size: 18px;
+    color: tomato;
+    font-weight: bold;
+  }
+}
+
+@keyframes enhance-header-img {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    inset: 0;
+    /* position: absolute; */
+    background: inherit;
+    filter: contrast(300%) opacity(0.6) brightness(0.5) blur(0.5px);
+    z-index: -1;
+    border-radius: 50px;
+    padding: 20px;
+  }
 }
 
 .header .logo {
@@ -48,6 +93,10 @@ body {
   width: 28%;
   color: #fff;
   padding: 8px;
+
+  animation: enhance-header-img linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 200px;
 }
 
 .header .navbar a {
@@ -55,6 +104,10 @@ body {
   margin: 0 1rem;
   color: #fff;
   padding: 8px;
+
+  animation: enhance-header-text linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 200px;
 }
 
 .header .navbar a:hover {
@@ -80,16 +133,16 @@ section {
 }
 
 .float {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    color: white;
-    margin: 5%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  color: white;
+  margin: 5%;
 }
 
-.float a i{
-font-size: 4rem;
+.float a i {
+  font-size: 4rem;
 }
 
 .hero {
@@ -457,43 +510,42 @@ footer {
   padding: 0.5rem;
 }
 
-.reviews-footer{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
+.reviews-footer {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
-.reviews-footer p{
-    font-family: Playfair Display;
+.reviews-footer p {
+  font-family: Playfair Display;
 }
 
-.reviews-footer div:nth-child(2){
-    text-align: end;
+.reviews-footer div:nth-child(2) {
+  text-align: end;
 }
 
-.reviews-footer div:nth-child(2) span{
-    font-weight: 700;
-    font-style: oblique;
+.reviews-footer div:nth-child(2) span {
+  font-weight: 700;
+  font-style: oblique;
 }
 
-.reviews-footer div:last-child{
-    text-align: end;
+.reviews-footer div:last-child {
+  text-align: end;
 }
 
-.reviews-footer div:last-child span{
-    font-weight: 700;
-    font-style: oblique;
+.reviews-footer div:last-child span {
+  font-weight: 700;
+  font-style: oblique;
 }
 
-.hr-reviews{
-    margin: 10px 0;
-    border: 1px solid white;
-    width: 100%;
-    text-align: center;
+.hr-reviews {
+  margin: 10px 0;
+  border: 1px solid white;
+  width: 100%;
+  text-align: center;
 }
-
 
 .contact {
   height: 700px;
@@ -553,11 +605,11 @@ footer {
   text-align: center;
 }
 
-.envolved hr{
-    margin-top: 10px;
-    border: 5px solid white;
-    width: 100%;
-    text-align: center;
+.envolved hr {
+  margin-top: 10px;
+  border: 5px solid white;
+  width: 100%;
+  text-align: center;
 }
 
 .footer-links .contact-box h4 {
@@ -580,19 +632,18 @@ footer {
   padding: 2% 0;
 }
 
-.logo{
-    align-content: end;
+.logo {
+  align-content: end;
   padding: 5% 0;
 }
 
-.logo img{
-    width: 60%;
+.logo img {
+  width: 60%;
 }
 
-.logo p{
-    font-family: Playfair Display;
+.logo p {
+  font-family: Playfair Display;
 }
-
 
 .contact-info {
   grid-column: 4/5;
